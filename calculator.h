@@ -54,12 +54,6 @@ private slots:
 
     void on_lg_button_clicked();
 
-    void on_equal_button_clicked();
-
-    void on_remove_button_clicked();
-
-    string defaultActions(string action, string sum);
-
     void on_sin_button_clicked();
 
     void on_tg_button_clicked();
@@ -78,9 +72,25 @@ private slots:
 
     void on_e_button_clicked();
 
+    void on_negative_button_clicked();
+
+    void on_remove_button_clicked();
+
+    void on_equal_button_clicked();
+
+    string defaultActions(string action, string sum);
+
+    string calculate(string sum);
+
     float atoi(const std::string& str);
 
-    void on_negative_button_clicked();
+
+
+    void on_bracketL_button_clicked();
+
+    void on_bracketR_button_clicked();
+
+    void on_module_button_clicked();
 
 private:
     Ui::Calculator *ui;

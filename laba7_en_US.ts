@@ -4,164 +4,169 @@
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="calculator.ui" line="365"/>
+        <location filename="calculator.ui" line="359"/>
         <source>4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="551"/>
+        <location filename="calculator.ui" line="174"/>
         <source>9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="441"/>
+        <location filename="calculator.ui" line="206"/>
         <source>√</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="256"/>
+        <location filename="calculator.ui" line="607"/>
         <source>^</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="646"/>
+        <location filename="calculator.ui" line="397"/>
         <source>cos</source>
         <oldsource>CE</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="722"/>
+        <location filename="calculator.ui" line="763"/>
         <source>5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="783"/>
+        <location filename="calculator.ui" line="649"/>
         <source>e</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="384"/>
+        <location filename="calculator.ui" line="283"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="403"/>
+        <location filename="calculator.ui" line="626"/>
         <source>2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="237"/>
+        <location filename="calculator.ui" line="549"/>
         <source>×</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="665"/>
+        <location filename="calculator.ui" line="687"/>
         <source>7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="346"/>
+        <location filename="calculator.ui" line="706"/>
         <source>ⁿ√</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="589"/>
+        <location filename="calculator.ui" line="154"/>
         <source>8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="627"/>
+        <location filename="calculator.ui" line="416"/>
         <source>6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="608"/>
+        <location filename="calculator.ui" line="264"/>
         <source>3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="134"/>
+        <location filename="calculator.ui" line="511"/>
         <source>÷</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="570"/>
+        <location filename="calculator.ui" line="378"/>
         <source>ctg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="422"/>
+        <location filename="calculator.ui" line="725"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="314"/>
+        <location filename="calculator.ui" line="321"/>
         <source>tg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="703"/>
+        <location filename="calculator.ui" line="302"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="460"/>
+        <location filename="calculator.ui" line="435"/>
         <source>ln</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="153"/>
+        <location filename="calculator.ui" line="473"/>
         <source>logₐ</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="218"/>
+        <location filename="calculator.ui" line="668"/>
         <source>log₂</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="684"/>
+        <location filename="calculator.ui" line="744"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="480"/>
-        <source>( )</source>
+        <location filename="calculator.ui" line="788"/>
+        <source>(</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="295"/>
+        <location filename="calculator.ui" line="808"/>
+        <source>)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="calculator.ui" line="135"/>
         <source>| |</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="518"/>
+        <location filename="calculator.ui" line="530"/>
         <source>!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="275"/>
+        <location filename="calculator.ui" line="340"/>
         <source>lg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="199"/>
+        <location filename="calculator.ui" line="245"/>
         <source>±</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="760"/>
+        <location filename="calculator.ui" line="492"/>
         <source>&lt;-</source>
         <oldsource>()</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="499"/>
+        <location filename="calculator.ui" line="225"/>
         <source>sin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="calculator.ui" line="741"/>
+        <location filename="calculator.ui" line="454"/>
         <source>=</source>
         <translation type="unfinished"></translation>
     </message>
