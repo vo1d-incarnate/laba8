@@ -192,7 +192,7 @@
           <font>
            <family>DejaVu Math TeX Gyre</family>
            <pointsize>50</pointsize>
-           <strikeout>true</strikeout>
+           <strikeout>false</strikeout>
           </font>
          </property>
          <property name="text">

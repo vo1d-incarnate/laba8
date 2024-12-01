@@ -148,10 +148,35 @@ void Calculator::on_minus_button_clicked()
 {
     std::string oldText = ui->result_label->text().toStdString();
     if (!(oldText.length() > 30)) {
-        math_sums += "-";
+        math_sums += "_";
         oldText += "-";
         ui->result_label->setText(QString::fromStdString(oldText));
     }
+}
+
+
+void Calculator::on_negative_button_clicked()
+{
+    std::string oldText = ui->result_label->text().toStdString();
+
+    string sBigMinus = "—"; //3 //1 // -
+    string sLong3 = "";
+
+    if (oldText.size() >= 3) {
+        sLong3 = oldText.substr(oldText.size()-3, 3);
+    }
+    if (sBigMinus == sLong3) {
+        oldText.pop_back(); //1
+        oldText.pop_back(); //2
+        oldText.pop_back(); //3
+        math_sums.pop_back(); //1
+    } else if (!(oldText.length() > 30)) {
+        math_sums += "-";
+        oldText += "—";
+    }
+
+    ui->result_label->setText(QString::fromStdString(oldText));
+
 }
 
 
@@ -431,6 +456,7 @@ void Calculator::on_remove_button_clicked()
     std::string oldText = ui->result_label->text().toStdString();
     string sMult = "×"; //2 //1 // *
     string sDiv = "÷"; //2 //1  // /
+    string sBigMinus = "—"; //3 //1 // -
     string sRoot = "√"; //3 //4 //sqrt
     string sCos = "cos"; //3 //3
     string sSin = "sin"; //3 //3
@@ -493,6 +519,10 @@ void Calculator::on_remove_button_clicked()
     if (!oldText.empty() && !math_sums.empty()) {
 
         if (sMult == sLong2 || sDiv == sLong2) { //2 //1
+            oldText.pop_back();
+        }
+        else if (sBigMinus == sLong3) { //3 //1 // -
+            oldText.pop_back();
             oldText.pop_back();
         }
         else if (sR1 == sLong5 || sR2 == sLong5 || sR3 == sLong5) { //5 //7 //root(x)
@@ -594,7 +624,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("!") == std::string::npos)) {
             int lenR[17];
             lenR[0] = sum.rfind("+", sum.find("!")-1);
-            lenR[1] = sum.rfind("-", sum.find("!")-1);
+            lenR[1] = sum.rfind("_", sum.find("!")-1);
             lenR[2] = sum.rfind("/", sum.find("!")-1);
             lenR[3] = sum.rfind("*", sum.find("!")-1);
             lenR[4] = sum.rfind("sqrt", sum.find("!")-1);
@@ -645,7 +675,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("cos") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("cos")+3);
-            len[1] = sum.find("-", sum.find("cos")+3);
+            len[1] = sum.find("_", sum.find("cos")+3);
             len[2] = sum.find("/", sum.find("cos")+3);
             len[3] = sum.find("*", sum.find("cos")+3);
             len[4] = sum.find("sqrt", sum.find("cos")+3);
@@ -689,7 +719,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("sin") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("sin")+3);
-            len[1] = sum.find("-", sum.find("sin")+3);
+            len[1] = sum.find("_", sum.find("sin")+3);
             len[2] = sum.find("/", sum.find("sin")+3);
             len[3] = sum.find("*", sum.find("sin")+3);
             len[4] = sum.find("sqrt", sum.find("sin")+3);
@@ -732,7 +762,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("tg") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("tg")+2);
-            len[1] = sum.find("-", sum.find("tg")+2);
+            len[1] = sum.find("_", sum.find("tg")+2);
             len[2] = sum.find("/", sum.find("tg")+2);
             len[3] = sum.find("*", sum.find("tg")+2);
             len[4] = sum.find("sqrt", sum.find("tg")+2);
@@ -775,7 +805,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("ct") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("ct")+2);
-            len[1] = sum.find("-", sum.find("ct")+2);
+            len[1] = sum.find("_", sum.find("ct")+2);
             len[2] = sum.find("/", sum.find("ct")+2);
             len[3] = sum.find("*", sum.find("ct")+2);
             len[4] = sum.find("sqrt", sum.find("ct")+2);
@@ -818,7 +848,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("lg") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("lg")+2);
-            len[1] = sum.find("-", sum.find("lg")+2);
+            len[1] = sum.find("_", sum.find("lg")+2);
             len[2] = sum.find("/", sum.find("lg")+2);
             len[3] = sum.find("*", sum.find("lg")+2);
             len[4] = sum.find("sqrt", sum.find("lg")+2);
@@ -861,7 +891,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("ln") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("ln")+2);
-            len[1] = sum.find("-", sum.find("ln")+2);
+            len[1] = sum.find("_", sum.find("ln")+2);
             len[2] = sum.find("/", sum.find("ln")+2);
             len[3] = sum.find("*", sum.find("ln")+2);
             len[4] = sum.find("sqrt", sum.find("ln")+2);
@@ -904,7 +934,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("ld") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("ld")+2);
-            len[1] = sum.find("-", sum.find("ld")+2);
+            len[1] = sum.find("_", sum.find("ld")+2);
             len[2] = sum.find("/", sum.find("ld")+2);
             len[3] = sum.find("*", sum.find("ld")+2);
             len[4] = sum.find("sqrt", sum.find("ld")+2);
@@ -947,7 +977,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("sqrt") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("sqrt")+4);
-            len[1] = sum.find("-", sum.find("sqrt")+4);
+            len[1] = sum.find("_", sum.find("sqrt")+4);
             len[2] = sum.find("/", sum.find("sqrt")+4);
             len[3] = sum.find("*", sum.find("sqrt")+4);
             len[4] = sum.find("sqrt", sum.find("sqrt")+4);
@@ -990,7 +1020,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("root") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("root")+4);
-            len[1] = sum.find("-", sum.find("root")+4);
+            len[1] = sum.find("_", sum.find("root")+4);
             len[2] = sum.find("/", sum.find("root")+4);
             len[3] = sum.find("*", sum.find("root")+4);
             len[4] = sum.find("sqrt", sum.find("root")+4);
@@ -1037,7 +1067,7 @@ void Calculator::on_equal_button_clicked()
         } else if (!(sum.find("log") == std::string::npos)) {
             int len[17];
             len[0] = sum.find("+", sum.find("log")+3);
-            len[1] = sum.find("-", sum.find("log")+3);
+            len[1] = sum.find("_", sum.find("log")+3);
             len[2] = sum.find("/", sum.find("log")+3);
             len[3] = sum.find("*", sum.find("log")+3);
             len[4] = sum.find("sqrt", sum.find("log")+3);
@@ -1087,10 +1117,10 @@ void Calculator::on_equal_button_clicked()
             } else if ((sum.find("/") == std::string::npos) || (sum.find("*") < sum.find("/"))) {
                 sum = defaultActions("*", sum);
             }
-        } else if ((!(sum.find("-") == std::string::npos)) || (!(sum.find("+") == std::string::npos))) {
-            if ((sum.find("+") == std::string::npos) || (sum.find("-") < sum.find("+"))) {
-                sum = defaultActions("-", sum);
-            } else if ((sum.find("-") == std::string::npos) || (sum.find("+") < sum.find("-"))) {
+        } else if ((!(sum.find("_") == std::string::npos)) || (!(sum.find("+") == std::string::npos))) {
+            if ((sum.find("+") == std::string::npos) || (sum.find("_") < sum.find("+"))) {
+                sum = defaultActions("_", sum);
+            } else if ((sum.find("_") == std::string::npos) || (sum.find("+") < sum.find("_"))) {
                 sum = defaultActions("+", sum);
             }
         } else {return;}
@@ -1102,7 +1132,7 @@ void Calculator::on_equal_button_clicked()
 string Calculator::defaultActions(string action, string sum) {
     int len[17];
     len[0] = sum.find("+", sum.find(action)+1);
-    len[1] = sum.find("-", sum.find(action)+1);
+    len[1] = sum.find("_", sum.find(action)+1);
     len[2] = sum.find("/", sum.find(action)+1);
     len[3] = sum.find("*", sum.find(action)+1);
     len[4] = sum.find("sqrt", sum.find(action)+1);
@@ -1130,7 +1160,7 @@ string Calculator::defaultActions(string action, string sum) {
     }
     int lenR[17];
     lenR[0] = sum.rfind("+", sum.find(action)-1);
-    lenR[1] = sum.rfind("-", sum.find(action)-1);
+    lenR[1] = sum.rfind("_", sum.find(action)-1);
     lenR[2] = sum.rfind("/", sum.find(action)-1);
     lenR[3] = sum.rfind("*", sum.find(action)-1);
     lenR[4] = sum.rfind("sqrt", sum.find(action)-1);
@@ -1210,3 +1240,6 @@ float Calculator::atoi(const std::string& str)
 {
   return ::atof(str.c_str());
 }
+
+
+

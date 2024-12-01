@@ -80,6 +80,8 @@ private slots:
 
     float atoi(const std::string& str);
 
+    void on_negative_button_clicked();
+
 private:
     Ui::Calculator *ui;
     std::string math_sums;
